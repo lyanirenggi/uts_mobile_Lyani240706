@@ -1,4 +1,4 @@
-# 🌿 Hamoo — Your Daily Schedule App
+# Hamoo_Your Daily Schedule App
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter)
 ![Dart](https://img.shields.io/badge/Dart-Null%20Safety-brightgreen?logo=dart)
