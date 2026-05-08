@@ -1,23 +1,32 @@
+// lib/main.dart
 import 'package:flutter/material.dart';
+import 'utils/constants.dart';
 import 'screens/login_screen.dart';
 import 'screens/forgot_password_screen.dart';
 import 'screens/dashboard_screen.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const HamooApp());
+}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class HamooApp extends StatelessWidget {
+  const HamooApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'UTS Flutter INSTIKI',
+      title: 'Hamoo',
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: kGreen),
+        useMaterial3: true,
+      ),
+      // Named Routes — minimal 3 route (syarat wajib!)
+      initialRoute: routeLogin,
       routes: {
-        '/': (context) => const LoginScreen(),
-        '/forgot-password': (context) => const ForgotPasswordScreen(),
-        '/dashboard': (context) => const DashboardScreen(),
+        routeLogin: (context) => const LoginScreen(),
+        routeForgotPassword: (context) => const ForgotPasswordScreen(),
+        routeDashboard: (context) => const DashboardScreen(),
       },
     );
   }
