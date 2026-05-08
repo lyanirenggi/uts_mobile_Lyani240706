@@ -1,6 +1,8 @@
-class UserModel {
-  final String email;
-  final String nama;
+// lib/models/user_model.dart
 
-  UserModel({required this.email, required this.nama});
+class UserModel {
+  final String name;
+  final String email;
+
+  UserModel({required this.name, required this.email});
 }
